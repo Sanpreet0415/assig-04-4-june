@@ -68,4 +68,12 @@ AnimalCF.prototype.greet = function() {
   return `Hi, I have ${this.noOfLegs} legs.`;
 };
 
-// Using .call() to create an
+// Using .call() to create an animal object
+let animalObj = {};
+AnimalCF.call(animalObj, 4, true);
+
+// Example usage
+console.log(animalObj.noOfLegs); // 4
+console.log(animalObj.vegetarian); // true
+console.log(animalObj.eat()); // eating...
+console.log(animalObj.greet()); // Hi, I have 4 legs.
